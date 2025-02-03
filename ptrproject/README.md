@@ -1,4 +1,4 @@
-# ptrsweetdessertproject
+# ptrproject
 
 ## Project setup
 ```
