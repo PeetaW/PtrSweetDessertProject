@@ -1,37 +1,47 @@
 <template>
   <div class="carousel-container">
     <div class="carousel">
-      <div class="carousel-item">A</div>
-      <div class="carousel-item">B</div>
-      <div class="carousel-item">C</div>
-      <div class="carousel-item">D</div>
+      <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
+        <img :src="require(`@/assets/image/${product.image}`)" alt="">
+      </div>
     </div>
     <div class="carousel">
-      <div class="carousel-item">A</div>
-      <div class="carousel-item">B</div>
-      <div class="carousel-item">C</div>
-      <div class="carousel-item">D</div>
+      <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
+        <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
+      </div>
     </div>
     <div class="carousel">
-      <div class="carousel-item">A</div>
-      <div class="carousel-item">B</div>
-      <div class="carousel-item">C</div>
-      <div class="carousel-item">D</div>
+      <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
+        <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'ProductCarousel'
+  name: 'ProductCarousel',
+  computed: {
+    ...mapGetters(['allProducts'])
+  },
+  methods: {
+    logProduct () {
+      console.log(this.allProducts)
+    }
+  },
+  mounted () {
+    this.logProduct()
+  }
 }
 
 </script>
 
 <style lang="scss" scoped>
-* {
-  border: solid 1px black;
-}
+// * {
+//   border: solid 1px black;
+// }
 
 @keyframes slide {
   from {
@@ -44,7 +54,7 @@ export default {
 
 div.carousel-container {
   margin: 0 auto;
-  width: 1000px;
+  width: 100%;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -58,7 +68,7 @@ div.carousel-container {
     top: 0;
     left: 0;
     z-index: 2;
-    width: 200px;
+    width: 400px;
     height: 100%;
   }
   &::after {
@@ -68,7 +78,7 @@ div.carousel-container {
     top: 0;
     right: 0;
     z-index: 2;
-    width: 200px;
+    width: 400px;
     height: 100%;
   }
 }
@@ -77,15 +87,19 @@ div.carousel {
   display: flex;
   min-height: 250px;
   min-width: 1200px;
-  animation: 5s slide linear infinite;
+  animation: 15s slide linear infinite;
   gap: 40px;
   padding-right: 40px
 }
 
 div.carousel-item {
-  width: 100%;
-  min-height: 250px;
+  width: 25%;
+  height: 250px;
   font-size: xx-large;
+  // animation: 5s slide linear infinite;
 }
-
+img {
+  width: 100%;
+  height: 100%;
+}
 </style>
