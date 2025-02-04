@@ -1,8 +1,10 @@
 <template>
   <nav>
-    <font-awesome-icon :icon="['fas', 'utensils']" />
-    <h3>Ptr Dessert</h3>
-    <font-awesome-icon :icon="['fas', 'bread-slice']" /> |
+    <div class="logoName">
+      <font-awesome-icon :icon="['fas', 'utensils']" />
+      <h3>Ptr Dessert</h3>
+      <font-awesome-icon :icon="['fas', 'bread-slice']" />
+    </div>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/login">Login</router-link> |
@@ -17,21 +19,29 @@
 </template>
 
 <style lang="scss">
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #383b3e;
+  background-color: #bed1bd;
 }
 
 nav {
+  background-color: #bed1bd;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #383b3e;
+    font-size: 1.2rem;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #9daf74;
     }
   }
 
@@ -39,6 +49,14 @@ nav {
     display: inline-block;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  div.logoName {
+    display: inline-block;
+    padding: 0px 20px;
+    margin-right: 20px;
+    color: #9daf74;
+    font-size: 1.2rem;
   }
 }
 </style>

@@ -64,7 +64,7 @@ div.carousel-container {
   &::before {
     content: "";
     position: absolute;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #bed1bd);
     top: 0;
     left: 0;
     z-index: 2;
@@ -74,7 +74,7 @@ div.carousel-container {
   &::after {
     content: "";
     position: absolute;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #bed1bd);
     top: 0;
     right: 0;
     z-index: 2;
