@@ -22,10 +22,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  // border: solid 1px black;
-}
-
 div.productCard {
   width: 220px;
   margin: 30px 20px;
