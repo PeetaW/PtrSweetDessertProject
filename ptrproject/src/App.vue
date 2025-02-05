@@ -5,7 +5,7 @@
       <h3>Ptr Dessert</h3>
       <font-awesome-icon :icon="['fas', 'bread-slice']" />
     </div>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">首頁</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/login">Login</router-link> |
     <router-link to="/product">產品列表</router-link> |
@@ -16,16 +16,31 @@
 
   </nav>
   <router-view/>
+  <div class="footer">
+    <MainFooter></MainFooter>
+  </div>
 </template>
 
+<script>
+import MainFooter from '@/components/MainFooter.vue'
+export default {
+  name: 'App',
+  components: {
+    MainFooter
+  }
+}
+</script>
+
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=LXGW+WenKai+TC&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "LXGW WenKai TC", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

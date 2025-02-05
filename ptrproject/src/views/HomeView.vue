@@ -8,27 +8,28 @@
   <div class="productDisplay">
     <ProductCarousel/>
   </div>
-  <div class="footer">
-    <MainFooter></MainFooter>
-  </div>
 </template>
 
 <script>
 import BannerPicture from '../components/BannerPicture.vue'
 import ProductCarousel from '../components/ProductDisplay.vue'
-import MainFooter from '@/components/MainFooter.vue'
 
 export default {
   name: 'HomeView',
   components: {
     BannerPicture,
-    ProductCarousel,
-    MainFooter
+    ProductCarousel
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=LXGW+WenKai+TC&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+
+* {
+  font-family: "LXGW WenKai TC", serif;
+}
+
 div.productDisplay {
   display: flex;
   flex-direction: row;

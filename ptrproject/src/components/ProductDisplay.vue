@@ -25,15 +25,15 @@ export default {
   name: 'ProductCarousel',
   computed: {
     ...mapGetters(['allProducts'])
-  },
-  methods: {
-    logProduct () {
-      console.log(this.allProducts)
-    }
-  },
-  mounted () {
-    this.logProduct()
   }
+  // methods: {
+  //   logProduct () {
+  //     console.log(this.allProducts)
+  //   }
+  // },
+  // mounted () {
+  //   this.logProduct()
+  // }
 }
 
 </script>
@@ -53,7 +53,8 @@ export default {
 }
 
 div.carousel-container {
-  margin: 0 auto;
+  margin: 0px auto;
+  margin-bottom: 30px;
   width: 100%;
   display: flex;
   overflow: hidden;
