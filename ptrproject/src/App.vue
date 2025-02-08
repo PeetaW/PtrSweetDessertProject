@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=LXGW+WenKai+TC&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=LXGW+WenKai+Mono+TC&family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@100..900&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
 
 html, body {
   margin: 0;
@@ -40,23 +40,23 @@ html, body {
 }
 
 #app {
-  font-family: "LXGW WenKai TC", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans TC", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #383b3e;
-  background-color: #bed1bd;
+  background-color: #bed2bd;
 }
 
 nav {
-  background-color: #bed1bd;
+  background-color: #bed2bd;
   a {
     font-weight: bold;
-    color: #383b3e;
+    color: #698C88;
     font-size: 1.2rem;
 
     &.router-link-exact-active {
-      color: #9daf74;
+      color: #9DAF75;
     }
   }
 
