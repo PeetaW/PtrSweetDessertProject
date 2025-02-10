@@ -87,18 +87,12 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  // border: solid 1px black;
   vertical-align: top;
 }
 
 div.viewBox {
   width: 100%;
-  // height: 90vh;
-  // border: solid 1px black;
   overflow: hidden;
-  // &:hover div.infoContainers {
-  //   transform: translateX(-100%);
-  // }
 }
 
 div.infoContainers {
@@ -107,12 +101,10 @@ div.infoContainers {
 
 div.lobbyContainer {
   width: 100%;
-  // height: 90vh;
   display: inline-block;
 }
 
 div.lobbyImage {
-  // border: solid 1px red;
   position: relative;
 }
 
