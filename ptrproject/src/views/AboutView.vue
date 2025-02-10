@@ -2,6 +2,7 @@
   <div class="viewBox">
     <div class="infoContainers" v-bind:style="containerStyle">
       <div class="lobbyContainer room" v-for="image,id in images" v-bind:key="id">
+        <h2>{{ image.name }}</h2>
         <div class="lobbyImage">
           <img v-bind:src="require(`@/assets/image/${image.image}`)" alt="">
           <div class="leftDirection" v-on:click="turnLeft">
@@ -15,13 +16,16 @@
             <div class="rightarrow"><font-awesome-icon :icon="['fas', 'arrow-right']" /></div>
           </div>
         </div>
+        <div class="context">
+          <p>{{ image.intro }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import $ from 'jquery'
+import $ from 'jquery'
 
 export default {
   data () {
@@ -29,16 +33,19 @@ export default {
       page: 1,
       images: [
         {
-          name: 'Store intro',
-          image: 'image-store-intro.jpg'
+          name: '小舖介紹',
+          image: 'image-store-intro.jpg',
+          intro: '彼得甜點小舖不像典型的甜點工作室，更像是一個提供甜點的充電小棧。我們鼓勵你停下來稍作休憩，暫別紛擾，吃個甜點整裝後再出發。我們秉持著如山林般的理念，堅定佇立於此，溫柔地照顧每位旅人，極簡但不空虛，平靜卻又生機盎然，讓每位旅人都能暫且放下行囊或重擔，休息好後帶著滿滿能量，無所畏懼地踏上旅途繼續奮鬥。'
         },
         {
-          name: 'Lobby forest',
-          image: 'image-lobby-forest.jpg'
+          name: '關於彼得小舖的一些故事',
+          image: 'image-lobby-forest.jpg',
+          intro: '歡迎你來到彼得小舖，很高興看到你願意多了解我們一點。'
         },
         {
-          name: 'Cuisine intro',
-          image: 'image-cuisine-intro.jpg'
+          name: '甜點特色',
+          image: 'image-cuisine-intro.jpg',
+          intro: '我們提供清爽不死甜的各式甜點。我們希望藉由味覺帶給你如清風般拂過樹梢的輕盈感，由各式各樣不同風味外觀的食材，展示予你不同時刻下的風景。簡單回歸本質，期許能成為你平靜的中途站，分享喜悅能源的開端。'
         }
       ]
     }
@@ -48,6 +55,18 @@ export default {
       return {
         transform: `translateX(${-this.page * 100}%)`,
         transition: 'ease-in-out 0.5s'
+      }
+    }
+  },
+  watch: {
+    page (newPage) {
+      if (newPage === 2) {
+        $('div.rightDirection').hide()
+      } else if (newPage === 0) {
+        $('div.leftDirection').hide()
+      } else {
+        $('div.rightDirection').show()
+        $('div.leftDirection').show()
       }
     }
   },
@@ -62,7 +81,6 @@ export default {
         this.page -= 1
       }
     }
-
   }
 }
 </script>
@@ -70,12 +88,13 @@ export default {
 <style lang="scss" scoped>
 * {
   // border: solid 1px black;
+  vertical-align: top;
 }
 
 div.viewBox {
   width: 100%;
-  height: 90vh;
-  border: solid 1px black;
+  // height: 90vh;
+  // border: solid 1px black;
   overflow: hidden;
   // &:hover div.infoContainers {
   //   transform: translateX(-100%);
@@ -84,12 +103,11 @@ div.viewBox {
 
 div.infoContainers {
   white-space: nowrap;
-  transition: linear 1s;
 }
 
 div.lobbyContainer {
   width: 100%;
-  height: 90vh;
+  // height: 90vh;
   display: inline-block;
 }
 
@@ -104,6 +122,7 @@ img {
   object-fit: cover;
   margin: 0 auto;
   position: relative;
+  border-radius: 30px;
 }
 
 hr {
@@ -117,9 +136,11 @@ div.leftDirection, div.rightDirection {
   position: absolute;
   border-radius: 5px;
   transform: translateX(-50%) translateY(50%);
+  padding: 5px 12px;
   background-color: #698C88;
   transition:cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
   cursor: pointer;
+  font-family: "Noto Sans TC", serif;
   font-size: 1.3rem;
   &:hover {
     background-color: #AAB9CC;
@@ -137,5 +158,20 @@ div.leftDirection {
 div.rightDirection {
   right: 33%;
   bottom: 0;
+}
+
+div.context {
+  width: 90%;
+  white-space: normal;
+  font-size: 1.5rem;
+  margin: 10px auto;
+  padding: 20px 0;
+  color: #383b3e;
+  font-family: "LXGW WenKai TC", serif;
+}
+
+h2 {
+  color: #698C88;
+  font-family: "Noto Sans TC", serif;
 }
 </style>

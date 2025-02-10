@@ -27,7 +27,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=LXGW+WenKai+TC&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
 
 * {
-  font-family: "LXGW WenKai TC", serif;
+  font-family: "Noto Sans TC", serif;
 }
 
 div.productDisplay {
@@ -42,5 +42,6 @@ div.productDisplay {
 h2 {
   font-size: 2rem;
   color:#698c88;
+  font-weight: 700;
 }
 </style>
