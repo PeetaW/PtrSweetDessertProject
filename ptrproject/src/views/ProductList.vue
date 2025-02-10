@@ -69,8 +69,7 @@ div.productName, div.productPrice {
   height: 50%;
   margin: 5px 0px;
   padding: 0px 15px;
-  // line-height: 40px;
-  font-family: "Noto Serif TC", serif;
+  font-family: "LXGW WenKai TC", serif;
   text-align: left;
   font-size: 1.1rem;
   transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
