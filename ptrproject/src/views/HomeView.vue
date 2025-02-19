@@ -8,17 +8,23 @@
   <div class="productDisplay">
     <ProductCarousel/>
   </div>
+  <h2>故事小天地</h2>
+  <div class="storyFrontPage">
+    <StoryFrontPage/>
+  </div>
 </template>
 
 <script>
 import BannerPicture from '../components/BannerPicture.vue'
 import ProductCarousel from '../components/ProductDisplay.vue'
+import StoryFrontPage from '@/components/StoryFrontPage.vue'
 
 export default {
   name: 'HomeView',
   components: {
     BannerPicture,
-    ProductCarousel
+    ProductCarousel,
+    StoryFrontPage
   }
 }
 </script>
