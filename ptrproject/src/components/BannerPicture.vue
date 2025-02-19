@@ -11,7 +11,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div{
+  overflow: hidden;
+}
 img {
-  height: 80vh;
+  width: 100vw;
 }
 </style>

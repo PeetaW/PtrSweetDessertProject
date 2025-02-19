@@ -165,5 +165,6 @@ div.context {
 h2 {
   color: #698C88;
   font-family: "Noto Sans TC", serif;
+  font-size: 2rem;
 }
 </style>

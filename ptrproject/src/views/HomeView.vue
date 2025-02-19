@@ -8,6 +8,7 @@
   <div class="productDisplay">
     <ProductCarousel/>
   </div>
+  <AboutView/>
   <h2>故事小天地</h2>
   <div class="storyFrontPage">
     <StoryFrontPage/>
@@ -18,13 +19,15 @@
 import BannerPicture from '../components/BannerPicture.vue'
 import ProductCarousel from '../components/ProductDisplay.vue'
 import StoryFrontPage from '@/components/StoryFrontPage.vue'
+import AboutView from './AboutView.vue'
 
 export default {
   name: 'HomeView',
   components: {
     BannerPicture,
     ProductCarousel,
-    StoryFrontPage
+    StoryFrontPage,
+    AboutView
   }
 }
 </script>
