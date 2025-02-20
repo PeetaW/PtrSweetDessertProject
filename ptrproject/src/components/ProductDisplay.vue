@@ -3,16 +3,19 @@
     <div class="carousel">
       <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
         <img :src="require(`@/assets/image/${product.image}`)" alt="">
+        <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
       </div>
     </div>
     <div class="carousel">
       <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
         <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
+        <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
       </div>
     </div>
     <div class="carousel">
       <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
         <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
+        <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
       </div>
     </div>
   </div>
@@ -98,9 +101,35 @@ div.carousel-item {
   height: 250px;
   font-size: xx-large;
   // animation: 5s slide linear infinite;
+  cursor: pointer;
+  &:hover{
+    img{
+      transform: scale(1.2);
+    }
+    div.carousel-item-name{
+    bottom: 10px;
+    }
+  }
 }
 img {
   width: 100%;
   height: 100%;
+  transition:cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+}
+
+div.carousel-item-name{
+  // border: solid 1px black;
+  width: 207px;
+  padding: 5px;
+  position: absolute;
+  bottom: -100px;
+  transform: translateX(-2%);
+  background-color: rgba(192, 210, 189, 0.8);
+  transition: bottom 0.3s;
+  font-size: 1.3rem;
+  white-space: pre-wrap;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 </style>
