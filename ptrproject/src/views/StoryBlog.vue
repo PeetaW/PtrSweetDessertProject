@@ -21,10 +21,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-*{
-  // border: solid 1px black;
-}
-
 div.container{
   display: block;
   margin: 0 auto;

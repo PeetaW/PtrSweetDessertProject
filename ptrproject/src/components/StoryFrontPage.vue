@@ -1,14 +1,16 @@
 <template>
   <div class="container" v-for="article,id in allArticles" :key="id">
-    <div class="topImage" :style="{ backgroundImage: `url('${require(`@/assets/image/${article.image}`)}')` }">
-      <div class="title">
-        <p>{{ article.title }}</p>
+    <Router-link :to="'/story/story1'" class="customLink">
+      <div class="topImage" :style="{ backgroundImage: `url('${require(`@/assets/image/${article.image}`)}')` }">
+        <div class="title">
+          <p>{{ article.title }}</p>
+        </div>
       </div>
-    </div>
-    <div class="bottomContent">
-      <p>{{ article.content }}</p>
-      <button>繼續閱讀</button>
-    </div>
+      <div class="bottomContent">
+        <p>{{ article.content }}</p>
+        <button>繼續閱讀</button>
+      </div>
+    </Router-link>
   </div>
 </template>
 
@@ -61,6 +63,7 @@ div.bottomContent{
   p{
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 5;
   -webkit-line-clamp: 5;
   overflow: hidden;
   margin:0;
@@ -92,6 +95,23 @@ div.title{
     margin: 0 auto;
     font-family: "LXGW WenKai Mono TC", serif;
     font-size: 1.3rem;
+  }
+}
+
+.customLink{
+  text-decoration: none;
+  color: inherit;
+  &:hover{
+    color: inherit;
+    text-decoration: none;
+  }
+  &:focus{
+    color: inherit;
+    text-decoration: none;
+  }
+  &:active{
+    color: inherit;
+    text-decoration: none;
   }
 }
 </style>
