@@ -8,27 +8,40 @@ export default createStore({
         price: 12.5,
         image: 'image-chocolate-cake-desktop.jpg',
         description: '結合了濃郁的巧克力、綿密的輕乳酪和清新藍莓，口感豐富，甜而不膩',
-        ingredient: '鮮奶油、乳酪、藍莓、黑巧克力、牛奶、糖、蛋、麵粉、發酵粉'
+        ingredient: '鮮奶油、乳酪、藍莓、黑巧克力、牛奶、糖、蛋、麵粉、發酵粉',
+        calories: 300
       },
       {
         name: '巧克力慕斯圓頂小蛋糕',
         price: 10.5,
-        image: 'image-chocolate-mousse-dome-cake-desktop.jpg'
+        image: 'image-chocolate-mousse-dome-cake-desktop.jpg',
+        description: '融合濃郁巧克力慕斯和鬆軟蛋糕，外層覆以光滑的巧克力釉。每口都帶來極致的巧克力享受。',
+        ingredient: '巧克力、鮮奶油、糖、雞蛋、牛奶、可可粉、麵粉、黃油、明膠',
+        calories: 450
       },
       {
         name: '法式原味千層',
         price: 6.5,
-        image: 'image-cream-crepe-cake-desktop.jpg'
+        image: 'image-cream-crepe-cake-desktop.jpg',
+        description: '層層堆疊的酥脆千層派皮中夾著滑順的香草卡士達醬，每一口都能感受到濃郁的奶香與酥脆的口感。',
+        ingredient: '奶油、牛奶、糖、雞蛋、麵粉、玉米澱粉、香草精、鹽',
+        calories: 400
       },
       {
         name: '清檸柑橘抹茶千層',
         price: 7.5,
-        image: 'image-mille-crepe-cake-desktop.jpg'
+        image: 'image-mille-crepe-cake-desktop.jpg',
+        description: '融合了清新的檸檬、柑橘風味與微苦的抹茶，層層疊疊的酥脆千層派皮中夾著綿密的抹茶卡士達醬和酸甜的柑橘果醬。',
+        ingredient: '奶油、牛奶、糖、雞蛋、麵粉、玉米澱粉、抹茶粉、檸檬皮屑、橙皮、檸檬汁、香草精',
+        calories: 400
       },
       {
         name: '咖啡乳酪塔',
         price: 10.5,
-        image: 'image-coffee-cheese-tart-desktop.jpg'
+        image: 'image-coffee-cheese-tart-desktop.jpg',
+        description: '結合濃郁咖啡香與滑順乳酪的甜點，酥脆的塔皮內盛裝著濃醇的咖啡乳酪餡，每口都是極致的享受。',
+        ingredient: '奶油、糖、麵粉、牛奶、雞蛋、奶油奶酪、濃縮咖啡、可可粉、香草精、鹽',
+        calories: 400
       }
     ],
     article: [

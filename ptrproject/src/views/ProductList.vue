@@ -5,7 +5,10 @@
   </div>
   <div class="productInfo">
     <div class="productName">{{product.name}}</div>
-    <div class="productPrice">${{product.price}}</div>
+    <div class="productPrice">${{product.price}} <hr></div>
+    <div class="productDescript">{{ product.description }} <hr></div>
+    <div class="productIngredients">材料: {{product.ingredient}}</div>
+    <div class="productCalories">熱量 {{product.calories}} 大卡</div>
   </div>
 </div>
 </template>
@@ -27,16 +30,20 @@ div.productCard {
   margin: 30px 20px;
   display: inline-block;
   background-color: darken($color: #bed1bd, $amount: 10);
-  box-shadow: 5px 10px 5px rgba(145, 162, 143, 0.5);
+  box-shadow: 10px 10px 10px rgba(145, 162, 143, 0.8);
   box-sizing: border-box;
   border-radius: 15px;
+  vertical-align: top;
   cursor: pointer;
   &:hover {
     img{
       transform: scale(1.2);
     }
     div.productName,
-    div.productPrice{
+    div.productPrice,
+    div.productDescript,
+    div.productIngredients,
+    div.productCalories{
       color: #698c88;
   }
   }
@@ -58,13 +65,13 @@ div.productImage {
 }
 
 div.productInfo {
-  height: 100px;
+  // height: 100px;
   width: 80%;
   border-color: orange;
   margin: 0px 0px 10px 0px;
 }
 
-div.productName, div.productPrice {
+div.productName, div.productPrice, div.productDescript, div.productIngredients, div.productCalories {
   width: 100%;
   height: 50%;
   margin: 5px 0px;
@@ -74,5 +81,6 @@ div.productName, div.productPrice {
   font-size: 1.1rem;
   transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
   white-space: pre-line;
+  line-height: 1.7rem;
 }
 </style>

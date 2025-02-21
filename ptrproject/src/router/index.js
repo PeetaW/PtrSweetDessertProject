@@ -64,7 +64,14 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition // 返回儲存的滾動位置 (當使用瀏覽器返回/前進時適用)
+    } else {
+      return { top: 0, behavior: 'smooth' } // 頁面跳轉後滾動到頂部，並添加平滑滾動效果
+    }
+  }
 })
 
 export default router

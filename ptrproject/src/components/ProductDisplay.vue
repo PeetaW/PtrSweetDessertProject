@@ -2,20 +2,26 @@
   <div class="carousel-container">
     <div class="carousel">
       <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
-        <img :src="require(`@/assets/image/${product.image}`)" alt="">
-        <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
+        <router-link :to="'/product'" class="customLink">
+          <img :src="require(`@/assets/image/${product.image}`)" alt="">
+          <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
+        </router-link>
       </div>
     </div>
     <div class="carousel">
       <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
-        <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
-        <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
+        <router-link :to="'/product'" class="customLink">
+          <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
+          <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
+        </router-link>
       </div>
     </div>
     <div class="carousel">
       <div class="carousel-item" v-for="product,id in allProducts" v-bind:key="id">
-        <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
-        <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
+        <router-link :to="'/product'" class="customLink">
+          <img :src="require(`@/assets/image/${product.image}`)" :alt="product.name">
+          <div class="carousel-item-name">{{ product.name }}<br>價格:${{ product.price }}</div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -130,6 +136,23 @@ div.carousel-item-name{
   white-space: pre-wrap;
   &:hover{
     text-decoration: underline;
+  }
+}
+
+.customLink{
+  text-decoration: none;
+  color: inherit;
+  &:hover{
+    color: inherit;
+    text-decoration: none;
+  }
+  &:focus{
+    color: inherit;
+    text-decoration: none;
+  }
+  &:active{
+    color: inherit;
+    text-decoration: none;
   }
 }
 </style>

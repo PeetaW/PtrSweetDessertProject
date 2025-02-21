@@ -1,6 +1,6 @@
 <template>
   <div class="container" v-for="article,id in allArticles" :key="id">
-    <Router-link :to="`/story/story-${id + 1}`" class="customLink">
+    <router-link :to="`/story/story-${id + 1}`" class="customLink">
       <div class="topImage" :style="{ backgroundImage: `url('${require(`@/assets/image/${article.image}`)}')` }">
         <div class="title">
           <p>{{ article.title }}</p>
@@ -10,7 +10,7 @@
         <p>{{ article.content }}</p>
         <button>繼續閱讀</button>
       </div>
-    </Router-link>
+    </router-link>
   </div>
 </template>
 
