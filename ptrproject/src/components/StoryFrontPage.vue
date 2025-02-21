@@ -1,6 +1,6 @@
 <template>
   <div class="container" v-for="article,id in allArticles" :key="id">
-    <Router-link :to="'/story/story1'" class="customLink">
+    <Router-link :to="`/story/story-${id + 1}`" class="customLink">
       <div class="topImage" :style="{ backgroundImage: `url('${require(`@/assets/image/${article.image}`)}')` }">
         <div class="title">
           <p>{{ article.title }}</p>
@@ -83,7 +83,8 @@ div.bottomContent{
 
 div.title{
   width: 50px;
-  height: 250px;
+  // height: 280px;
+  padding: 5px;
   position: absolute;
   top: 50%;
   left: 15%;

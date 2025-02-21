@@ -8,45 +8,39 @@
    </div>
   </div>
  </template>
- 
- <script>
- import { mapGetters } from 'vuex'
- 
- export default {
-   name: 'StoryBlog',
-   computed: {
-     ...mapGetters(['allArticles'])
-   }
- }
- </script>
- 
- <style lang="scss" scoped> 
- div.container{
-   display: block;
-   margin: 0 auto;
-   width: 800px;
- }
- 
- div.topImage{
-   width: 800px;
-   height: 400px;
-   background-image: url('../assets/image/image-story-1.jpg');
-   background-size: cover;
-   background-position: center;
- }
- 
- div.bottomContent{
-   h2, p{
-     font-family: "LXGW WenKai Mono TC", serif;
-   }
-   p.content{
-     white-space: normal;
-     line-height: 2.5em;
-     margin: 0;
-     text-align: justify;
-     font-size: 18px;
-     margin-bottom: 20px;
-   }
- }
- </style>
- 
+
+<script>
+export default {
+  name: 'Story3Detail'
+}
+</script>
+
+<style lang="scss" scoped>
+div.container{
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+}
+
+div.topImage{
+  width: 800px;
+  height: 400px;
+  background-image: url('../assets/image/image-story-3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+div.bottomContent{
+  h2, p{
+    font-family: "LXGW WenKai Mono TC", serif;
+  }
+  p.content{
+    white-space: normal;
+    line-height: 2.5em;
+    margin: 0;
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+</style>

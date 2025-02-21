@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Story1Detail from '@/views/Story1Detail.vue'
+import Story2Detail from '@/views/Story2Detail.vue'
+import Story3Detail from '@/views/Story3Detail.vue'
+import Story4Detail from '@/views/Story4Detail.vue'
+import Story5Detail from '@/views/Story5Detail.vue'
 
 const routes = [
   {
@@ -32,9 +36,29 @@ const routes = [
     component: () => import(/* webpackChunkName: "story" */ '../views/StoryBlog.vue')
   },
   {
-    path: '/story/story1',
+    path: '/story/story-1',
     name: 'story-1',
     component: Story1Detail
+  },
+  {
+    path: '/story/story-2',
+    name: 'story-2',
+    component: Story2Detail
+  },
+  {
+    path: '/story/story-3',
+    name: 'story-3',
+    component: Story3Detail
+  },
+  {
+    path: '/story/story-4',
+    name: '/story-4',
+    component: Story4Detail
+  },
+  {
+    path: '/story/story-5',
+    name: '/story-5',
+    component: Story5Detail
   }
 ]
 
