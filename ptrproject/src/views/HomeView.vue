@@ -53,4 +53,10 @@ h2 {
   color:#698c88;
   font-weight: 700;
 }
+
+@media screen and (max-width: 600px) {
+  h2{
+    padding: 0 50px;
+  }
+}
 </style>

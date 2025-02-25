@@ -106,7 +106,6 @@ div.carousel-item {
   width: 25%;
   height: 250px;
   font-size: xx-large;
-  // animation: 5s slide linear infinite;
   cursor: pointer;
   &:hover{
     img{
@@ -153,6 +152,25 @@ div.carousel-item-name{
   &:active{
     color: inherit;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.carousel{
+    min-height: 150px;
+    min-width: 800px;
+  }
+
+  div.carousel-item-name{
+    width: 120px;
+    bottom: -70px;
+    font-size: 0.9rem;
+    transform: translateX(-2%);
+  }
+
+  div.carousel-item{
+    width: 20%;
+    height: 150px;
   }
 }
 </style>

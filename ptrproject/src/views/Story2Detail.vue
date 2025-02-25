@@ -43,4 +43,40 @@ div.bottomContent{
     margin-bottom: 20px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  div.container{
+    width: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  div.topImage{
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  div.bottomContent{
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  div.container{
+    width: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  div.topImage{
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  div.bottomContent{
+    padding: 0 30px;
+  }
+}
 </style>

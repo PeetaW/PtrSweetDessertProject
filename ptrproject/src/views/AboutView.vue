@@ -167,4 +167,15 @@ h2 {
   font-family: "Noto Sans TC", serif;
   font-size: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+  div.leftDirection{
+    left: 30%;
+    bottom: 0;
+  }
+  div.rightDirection{
+    right: 10%;
+    bottom: 0;
+  }
+}
 </style>
