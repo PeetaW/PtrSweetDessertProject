@@ -5,6 +5,7 @@ import Story2Detail from '@/views/Story2Detail.vue'
 import Story3Detail from '@/views/Story3Detail.vue'
 import Story4Detail from '@/views/Story4Detail.vue'
 import Story5Detail from '@/views/Story5Detail.vue'
+import LoginPage from '@/views/LoginPage.vue'
 
 const routes = [
   {
@@ -59,6 +60,11 @@ const routes = [
     path: '/story/story-5',
     name: '/story-5',
     component: Story5Detail
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginPage
   }
 ]
 

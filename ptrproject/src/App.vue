@@ -8,7 +8,8 @@
     <router-link to="/">首頁</router-link> |
     <router-link to="/product">產品列表</router-link> |
     <router-link to="/about">關於我們</router-link> |
-    <router-link to="/blog">故事小區</router-link>
+    <router-link to="/blog">故事小區</router-link> |
+    <router-link to="/login">會員登入</router-link>
   </nav>
   <router-view/>
   <div class="footer">
